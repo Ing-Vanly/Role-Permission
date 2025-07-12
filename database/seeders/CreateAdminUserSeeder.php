@@ -28,7 +28,7 @@ class CreateAdminUserSeeder extends Seeder
         $role->syncPermissions($permissions);
 
         $user->assignRole([$role->id]);
-        // ========== Employee ==========
+        //Employee
         $employee = User::create([
             'name' => 'employee',
             'email' => 'employee@gmail.com',
@@ -38,7 +38,7 @@ class CreateAdminUserSeeder extends Seeder
         $employeeRole = Role::firstOrCreate(['name' => 'Employee']);
         $employee->assignRole($employeeRole);
 
-        // ========== User ==========
+        //User
         $user = User::create([
             'name' => 'user',
             'email' => 'user@gmail.com',
